@@ -68,5 +68,5 @@ server.applyMiddleware({ app, path: '/api' });
 
 app.get('/', (req, res) => res.send('В разработке'));
 app.listen(port, () =>
-  console.log(`Server is running at http://localhost:${port}`)
+  console.log(`Local server is running at http://localhost:${port}`)
 );
