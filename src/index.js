@@ -66,7 +66,7 @@ const server = new ApolloServer({
 //Промежуточное ПО для тестов API
 server.applyMiddleware({ app, path: '/api' });
 
-app.get('/', (req, res) => res.send('В разработке'));
+app.get('/', (req, res) => res.send('В разработке!!!'));
 app.listen(port, () =>
   console.log(`Local server is running at http://localhost:${port}`)
 );
