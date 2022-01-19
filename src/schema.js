@@ -4,6 +4,7 @@ module.exports = gql`
   scalar DateTime
   type Note {
     id: ID!
+    anons: String!
     content: String!
     author: User!
     createdAt: DateTime!

@@ -3,6 +3,7 @@ const mongoose = require('mongoose');
 // Определяем схему БД заметки
 const noteSchema = new mongoose.Schema(
   {
+    anons: { type: String, required: true },
     content: {
       type: String,
       required: true
