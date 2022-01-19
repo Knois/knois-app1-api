@@ -1,6 +1,8 @@
 module.exports = {
   notes: async (parent, args, { models }) => {
-    return await models.Note.find().sort({ updatedAt: -1 })limit(1000);
+    return await models.Note.find()
+      .sort({ updatedAt: -1 })
+      .limit(1000);
   },
   note: async (parent, args, { models }) => {
     return await models.Note.findById(args.id);
