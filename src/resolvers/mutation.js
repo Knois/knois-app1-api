@@ -16,6 +16,7 @@ module.exports = {
       throw new AuthenticationError('You must be signed in to create a note');
     }
     return await models.Note.create({
+      anons: args.anons,
       content: args.content,
       // Ссылаемся на mongo id автора
       author: mongoose.Types.ObjectId(user.id)
@@ -42,7 +43,7 @@ module.exports = {
       return false;
     }
   },
-  updateNote: async (parent, { content, id }, { models, user }) => {
+  updateNote: async (parent, { content, id, anons }, { models, user }) => {
     // Если не пользователь, выбрасываем ошибку авторизации
     if (!user) {
       throw new AuthenticationError('You must be signed in to update a note');
@@ -61,7 +62,8 @@ module.exports = {
       },
       {
         $set: {
-          content
+          content,
+          anons
         }
       },
       {
