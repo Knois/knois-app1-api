@@ -137,8 +137,7 @@ module.exports = {
         {
           // Устанавливаем new как true, чтобы вернуть обновленный документ
           new: true
-        },
-        { timestamps: false }
+        }
       );
     } else {
       // Если пользователя в списке нет, добавляем его туда и увеличиваем
@@ -155,8 +154,7 @@ module.exports = {
         },
         {
           new: true
-        },
-        { timestamps: false }
+        }
       );
     }
   }
