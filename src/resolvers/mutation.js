@@ -136,7 +136,8 @@ module.exports = {
         },
         {
           // Устанавливаем new как true, чтобы вернуть обновленный документ
-          new: true
+          new: true,
+          timestamps: false
         }
       );
     } else {
@@ -153,7 +154,8 @@ module.exports = {
           }
         },
         {
-          new: true
+          new: true,
+          timestamps: false
         }
       );
     }
